@@ -1,1 +1,94 @@
+ <!DOCTYPE html>
 
+<html>
+<head>
+    <title> Conversions </title>
+    <style> body {
+        background-image: url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+    </style>    
+</head>
+
+<body>
+    <center>
+        <h1> Conversions </h1>
+       
+        <br>
+        <h2> Celsius To Fahrenheit </h2>
+        <br>
+        <label for="Celsius"> Input Celsius </label>
+        <input id="Celsius" type="text" placeholder="Celsius" size="10">
+        <button onclick="fahrenheit()"> Convert </button>
+        <br><br>
+        <p>The Result is :
+            <span id="fahrenheit" style="font-weight:bold"></span>
+        </p>
+        
+        <br>
+        <h2> Fahrenheit to Celsius </h2>
+        <br>
+        <label for="Fahrenheit2"> Input Fahrenheit </label>
+        <input id="Fahrenheit2" type="text" placeholder="Fahrenheit" size="10">
+        <button onclick="Celsius2()"> Convert </button>
+        <br><br>
+        <p>The Result is :
+            <span id="Celsius2" style="font-weight:bold"></span>
+        </p>
+
+        <br>
+        <h2> Meters To Feet </h2>
+        <br>
+         <label for="Meters"> Input Meter/s </label>
+        <input id="Meters" type="text" placeholder="Meter/s" size="10">
+        <button onclick="Feet()"> Convert </button>
+        <br><br>
+        <p>The Result is :
+            <span id="Feet" style="font-weight:bold"></span>
+        </p>
+
+        <br>
+        <h2> Feet to Meters </h2>
+        <br>
+         <label for="Feet2"> Input Feet </label>
+        <input id="Feet2" type="text" placeholder="Feet" size="10">
+        <button onclick="Meters2()"> Convert </button>
+        <br><br>
+        <p>The Result is :
+            <span id="Meters2" style="font-weight:bold"></span>
+        </p>        
+
+        <br><br>
+    </body>
+    </center>
+
+    <script>
+        function fahrenheit() {
+
+            var num1 = document.getElementById("Celsius").value;
+            document.getElementById("fahrenheit").innerHTML = (9 / 5 * num1) + 32;
+        }
+
+        function Celsius2() {
+           
+            var num2 = document.getElementById("Fahrenheit2").value;
+            document.getElementById("Celsius2").innerHTML = (num2 - 32) * 5/9;
+        } 
+
+        function Feet() {
+        
+            var num3 = document.getElementById("Meters").value;
+            document.getElementById("Feet").innerHTML = num3 * 3.28;
+        }
+     
+        function Meters2() {
+        
+            var num3 = document.getElementById("Feet2").value;
+            document.getElementById("Meters2").innerHTML = num3 / 3.28;
+        }
+
+
+        </script> 
+          </html>
